@@ -1,0 +1,14 @@
+@use "../abstracts";
+
+@media (min-width: 500px) {
+  body {
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 20rem;
+  }
+}

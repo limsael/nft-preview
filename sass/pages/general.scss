@@ -5,3 +5,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: abstracts.$font-outfit;
+  font-size: abstracts.$font-size-base;
+  background-color: abstracts.$blue-main-bg;
+  padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: abstracts.$white;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: abstracts.$cyan-400;
+  }
+}

@@ -1,1 +1,110 @@
 @use "../abstracts";
+
+.card {
+  background-color: abstracts.$blue-card-bg;
+  padding: 0.9725rem;
+  border-radius: 0.5rem;
+
+  &__container {
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover .card__overlay {
+      opacity: 0.5;
+    }
+
+    &:hover .card__view {
+      opacity: 1;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    background-color: abstracts.$cyan-400;
+    border-radius: 0.6rem;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  &__view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  &__title {
+    font-size: abstracts.$font-size-lg;
+    margin-block: 1rem;
+  }
+
+  &__description {
+    font-size: abstracts.$font-size-sm;
+    color: abstracts.$blue-500;
+    margin-block: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.02rem;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 0.975rem;
+  }
+
+  &__price,
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: abstracts.$font-size-sm;
+  }
+
+  &__price {
+    color: abstracts.$cyan-400;
+  }
+
+  &__time {
+    color: abstracts.$blue-500;
+  }
+
+  &__divider {
+    height: 1px;
+    background-color: abstracts.$blue-line;
+    margin-block: 0.975rem;
+  }
+
+  &__author {
+    display: flex;
+    gap: 0.975rem;
+    align-items: center;
+    margin-block-end: 1rem;
+
+    &-avatar {
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid abstracts.$white;
+      border-radius: 50%;
+    }
+
+    &-title {
+      font-size: abstracts.$font-size-sm;
+      color: abstracts.$blue-500;
+    }
+  }
+}
